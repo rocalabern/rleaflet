@@ -1,0 +1,11 @@
+Package: rleaflet
+Type: Package
+Title: Tools for leaflet
+Version: 1.0
+Date: 2013-11-16
+Author: Roc Alabern
+Maintainer: Roc Alabern <roc.alabern@gmail.com>
+Description: Tools for leaflet
+License: GPLv2
+Collate:
+    'rleaflet.R'

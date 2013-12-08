@@ -1,0 +1,21 @@
+\name{r.leaflet}
+\alias{r.leaflet}
+\title{r.leaflet}
+\usage{
+  r.leaflet(mark.lat = NULL, mark.lng = NULL,
+    mark.label = NULL, circle.lat = NULL,
+    circle.lng = NULL, circle.label = NULL,
+    circle.size = NULL, circle.color = NULL,
+    circle.fillcolor = NULL, circle.opacity = NULL,
+    circle.stroke = FALSE, map.height = 480,
+    map.lat = 41.383531, map.long = 2.178389, map.zoom = 8,
+    filename = "mymap.html", openmap = FALSE,
+    leafletcss = "http://cdn.leafletjs.com/leaflet-0.5/leaflet.css",
+    leafletjs = "http://cdn.leafletjs.com/leaflet-0.5/leaflet.js",
+    lgooglejs = "https://raw.github.com/shramov/leaflet-plugins/master/layer/tile/Google.js",
+    mgooglejs = "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+}
+\description{
+  r.leaflet
+}
+

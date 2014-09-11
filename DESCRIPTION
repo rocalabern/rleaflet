@@ -7,5 +7,3 @@ Author: Roc Alabern
 Maintainer: Roc Alabern <roc.alabern@gmail.com>
 Description: Tools for leaflet
 License: GPLv2
-Collate:
-    'rleaflet.R'

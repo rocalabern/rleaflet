@@ -8,10 +8,12 @@ double.escape<-function(textvector) {
 #' r.leaflet
 #' @export
 r.leaflet<-function(
-  mark.lat=NULL,mark.lng=NULL,mark.label=NULL,
-  circle.lat=NULL,circle.lng=NULL,circle.label=NULL,
-  circle.size=NULL,circle.color=NULL,circle.fillcolor=NULL,circle.opacity=NULL,
-  circle.stroke=FALSE,
+  mark.lat=NULL, mark.lng=NULL, mark.label=NULL,
+  circle.lat=NULL, circle.lng=NULL,
+  circle.label=NULL,
+  circle.size=NULL,
+  circle.stroke=FALSE, circle.color=NULL,
+  circle.fillcolor=NULL, circle.opacity=NULL,
   map.height=480,
   map.lat=41.383531,
   map.long=2.178389,
@@ -60,15 +62,14 @@ r.leaflet<-function(
     } else {
       bindpopup<-""
     }  
-    #     circle.lat=NULL,circle.lng=NULL,circle.label=NULL,
-    #     circle.size=NULL,circle.color=NULL,circle.fillcolor=NULL,circle.opacity=NULL,    
-    # L.circle([42.162392,1.092892], 5000, {color: 'red',fillColor: '#f03',fillOpacity: 0.5}).addTo(map);
     if (circle.stroke) {
-      strStroke = ""
+      strStroke = paste0("color: \'",
+                      circle.color,"\'",
+                      ",")
     } else {
       strStroke = "stroke:false,"      
     }
-    div.circle<-paste("L.circle([",
+    div.circle<-paste0("L.circle([",
                       circle.lat,
                       ",",
                       circle.lng,
@@ -76,17 +77,14 @@ r.leaflet<-function(
                       circle.size,
                       ", {",
                       strStroke,
-#                       "color: \'",
-#                       circle.color,"\'",
-#                       ",",
-                      "fillcolor: \'",
-                      circle.color,"\'",
+                      "fillColor: \'",
+                      circle.fillcolor,"\'",
                       ",",
                       "fillOpacity: ",
                       circle.opacity,
                       "}).addTo(map)",
                       bindpopup,
-                      ";", sep="")
+                      ";")
   } else {
     div.circle = ""
   }
